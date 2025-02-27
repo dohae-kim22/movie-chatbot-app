@@ -1,21 +1,16 @@
 import Store from "../core/store";
-
-interface IMessage {
-  role: "assistant" | "user";
-  content: string;
-}
+import OpenAI from "openai";
 
 interface IState {
   chatText: string;
-  messages: IMessage[];
+  messages: OpenAI.ChatCompletionMessageParam[];
   loading: boolean;
 }
 
-const defaultMessages: IMessage[] = [
+const defaultMessages: OpenAI.ChatCompletionMessageParam[] = [
   {
     role: "assistant",
-    content:
-      " I'd be happy to recommend some movies. Could you share your favorite genre or movie title?",
+    content: "Hey! What’s your favorite movie genre or title?",
   },
 ];
 
@@ -45,7 +40,8 @@ export async function sendMessages() {
         messages: store.state.messages,
       }),
     });
-    const message = res.json();
+    const message = await res.json();
+    store.state.messages.push(message);
   } catch (error) {
     console.log("sendMessages error : ", error);
   } finally {
