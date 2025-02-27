@@ -34,7 +34,7 @@ export default class Chatbot extends Component {
                     ? message.content.replace(
                         /{{(.*?)}}/g,
                         (match, title) =>
-                          `<span class="title" data-title=${title.toLowerCase()}>${title}</span>`
+                          `<span class="title" data-title="${title.toLowerCase()}">${title}</span>`
                       )
                     : ""
                 }</li>`
@@ -109,9 +109,12 @@ export default class Chatbot extends Component {
     const titleEl = this.el.querySelectorAll<HTMLElement>(".chats .title");
     titleEl.forEach((el) => {
       el.addEventListener("click", () => {
+        this.el.classList.remove("chatbot-on");
+
         const searchInputEL =
           document.querySelector<HTMLInputElement>(".search input");
         if (!searchInputEL) return;
+
         const title = el.dataset.title || "";
         searchInputEL.value = title;
         movieStore.state.searchText = title;
