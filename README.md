@@ -1,37 +1,38 @@
-# Movie Search Application with Chatbot Integration
+# 🤖 Movie Chatbot App
 
-This is a **Movie Search Web Application** built using **TypeScript**, leveraging the **OMDb API** to fetch movie details and **OpenAI GPT-3.5-turbo model** for personalized movie recommendations. The application allows users to search for movies by title, view detailed information about movies, and interact with a **chatbot** that provides personalized recommendations based on their favorite movies or genres.
+A responsive and interactive movie chatbot web app  
+built with **TypeScript**, using the **OMDb API** for movie data  
+and **OpenAI GPT-3.5-turbo** for personalized recommendations.
 
-## Features
+👉 [Live Demo](https://movie-chatbot-app.vercel.app/#/)
 
-- **Search for movies** by title using the OMDb API.
-- **View movie details**: Get information about posters, ratings, plot, actors, director, and etc.
-- **Chatbot movie recommendations**: The chatbot uses OpenAI’s GPT-3.5-turbo model to recommend movies based on the user’s favorite movies or genres.
-- **Responsive design**: Optimized for both mobile and desktop views.
-- **Dynamic navigation**: Switch between the homepage and movie detail page.
-- **Easy access to OMDb API**: Fetch movie data seamlessly.
+---
 
-## Chatbot Integration
+## 🔍 Features
 
-The application now includes a **movie recommendation chatbot** powered by **OpenAI’s GPT-3.5-turbo model**. The chatbot can:
+- **Search for movies by title** using the [OMDb API](https://www.omdbapi.com/)
+- **Chatbot recommendations** powered by OpenAI's GPT-3.5 model
+- **View movie details**: posters, ratings, plot, actors, director, and more
+- **Natural language interaction** with the chatbot
+- **Dynamic navigation** between homepage and detail view
+- **Responsive design** for mobile, tablet, and desktop
+- **No frameworks used on the frontend** – just TypeScript, HTML, and CSS
 
-- Respond to user queries about movie recommendations based on their favorite movies or genres.
-- Use natural language processing to generate personalized suggestions.
-- Interact with the **OMDb API** to provide detailed information about the recommended movies.
+---
 
-### How it Works:
+## 🛠 Tech Stack
 
-1. **User Interaction**: The user can enter their favorite movie or genre into the chatbot.
-2. **OpenAI API**: The chatbot sends the user’s input to the OpenAI API, which processes the request and returns relevant movie recommendations.
-3. **Movie Suggestions**: The chatbot responds with a list of recommended movies. The OMDb API is then queried for additional details (e.g., plot, actors, director, ratings, etc.) for the suggested movies.
+- **TypeScript** – type-safe, maintainable frontend logic
+- **HTML & CSS** – structure and custom styling
+- **OMDb API** – movie information provider
+- **OpenAI GPT-3.5-turbo** – AI-powered chatbot
+- **Vite** – modern build tool and dev server
 
-## Live Demo
+---
 
-You can check out the live demo of this project hosted on [Vercel](https://movie-chatbot-app.vercel.app/#/).
+## 📸 Preview
 
-## Screenshots
-
-Here are some updated screenshots of the application:
+Here are some screenshots of the application:
 
 ### Home Page with Chatbot:
 
@@ -45,9 +46,13 @@ Here are some updated screenshots of the application:
 
 ![Movie Detail Page](https://github.com/dohae-kim22/movie-chatbot-app/blob/main/asset/screenshot/movie-detail.png)
 
-## Technologies Used
 
-- **TypeScript** for frontend logic and type safety.
-- **OMDb API** for fetching movie data.
-- **OpenAI GPT-3.5-turbo model** for chatbot movie recommendations.
-- **HTML/CSS** for frontend structure and styling.
+---
+
+## 📱 Responsive Breakpoints
+
+| Device       | Screen Width         | Optimized Layout |
+|--------------|----------------------|------------------|
+| 📱 Mobile     | Less than 721px       | ✅ Yes           |
+| 💻 Tablet     | 721px – 1199px         | ✅ Yes           |
+| 🖥 Desktop    | 1200px and above      | ✅ Yes           |
