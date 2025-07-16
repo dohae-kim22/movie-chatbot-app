@@ -129,6 +129,7 @@ header {
   position: sticky;
   align-items: center;
   top: 0;
+  z-index: 10;
 }
 
 header img {
